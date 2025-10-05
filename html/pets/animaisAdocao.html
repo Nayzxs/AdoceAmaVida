@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais para Adoção</title>
+    <link rel="stylesheet" href="/css/animaisAdocao.css">
+    <link rel="icon" href="/assets/img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="voltar">
+            <button onclick="window.history.back()" class="btn-voltar">
+                <img id="seta" src="/assets/icons/next.png" alt="">
+            </button>
+        </div>
+        <div class="logo">
+            <h1>AdoceUma<span class="vermelho">Vida</span></h1>
+            <img id="logo" src="/assets/img/logo.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section class="animais-adocao">
+            <h1>Animais para adoção</h1>
+            <section class="container-animais">
+            </section>
+        </section>
+    </main>
+
+<script>
+const container = document.querySelector('.container-animais');
+const animais = JSON.parse(localStorage.getItem('animais')) || [];
+
+container.innerHTML = '';
+
+animais.forEach((animal, index) => {
+    const card = document.createElement('div');
+    card.classList.add('cards-animais');
+    card.innerHTML = `
+        <a href="perfilAnimal.html" onclick="selecionarAnimal(${index})">
+            <div class="card-foto">
+                <img class="foto" src="${animal.foto}" alt="${animal.nome}">
+            </div>
+            <h2 class="nome">${animal.nome}</h2>
+            <p class="raca">${animal.raca}</p>
+        </a>
+    `;
+    container.appendChild(card);
+});
+
+function selecionarAnimal(index) {
+    localStorage.setItem('animalSelecionado', index);
+}
+</script>
+
+</body>
+</html>

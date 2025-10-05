@@ -1,0 +1,149 @@
+@font-face {
+  font-family: LeagueSpartan;
+  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: LeagueSpartan;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #6BB5ED;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+.voltar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-voltar {
+  border: none;
+  background: transparent;
+}
+
+#seta {
+  width: 6vh;
+  rotate: 180deg;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+#logo {
+  width: 7vh;
+}
+
+.vermelho {
+  color: red;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: #71acf0;
+  width: 70%;
+  gap: 5px;
+
+}
+
+.card1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.subtitulo {
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+strong {
+  color: rgb(0, 0, 0);
+}
+
+.botoes-doacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.botoes-doacao a {
+  width: 30vh;
+  padding: 30px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #120909;
+  background-color: rgb(163, 213, 232);
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: #718a87 7px 7px 10px 1px ;
+}
+
+a:hover {
+  border: none;
+  transition: 0.5s ease;
+  background-color: #f6f3aefc;
+  color: rgb(0, 0, 0);
+  box-shadow: #d1c62f 7px 6px 10px 0px;
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+  .botoes-doacao{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media screen and (min-width:900px) {
+  .botoes-doacao{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+}

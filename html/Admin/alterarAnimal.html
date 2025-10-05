@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar Perfil do Animal</title>
+  <link rel="stylesheet" href="/css/alterarAnimal.css">
+  <link rel="icon" href="/assets/img/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="voltar">
+      <button onclick="window.history.back()" class="btn-voltar">
+        <img id="seta" src="/assets/icons/next.png" alt="">
+      </button>
+    </div>
+    <div class="logo">
+      <h1>AdoceUma<span class="vermelho">Vida</span></h1>
+      <img id="logo" src="/assets/img/logo.png" alt="">
+    </div>
+  </header>
+
+  <main>
+    <section class="alterar-perfil">
+      <h2 class="titulo">Alterar de perfil</h2>
+
+      <div id="formContainer"></div>
+
+      <section class="modal" id="modal">
+        <div class="container">
+          <div class="container1">
+            <div class="card1">
+              <img class="dog" src="/assets/img/dog.png" alt="cachorro">
+            </div>
+            <div class="card2">
+              <h1>Tem Certeza?</h1>
+              <p>Deseja excluir <span id="nomeAnimal"></span>?</p>
+            </div>
+          </div>
+          <div class="footer">
+            <button id="cancelar">
+              Cancelar
+            </button>
+            <button id="confirmar">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="botoes">
+        <button id="excluirBtn" class="botao">Excluir</button>
+        <button id="cancelarBtn" class="botao">Cancelar</button>
+        <button id="salvarBtn" class="botao">Salvar</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/js/alterarAnimal.js"></script>
+</body>
+
+</html>
