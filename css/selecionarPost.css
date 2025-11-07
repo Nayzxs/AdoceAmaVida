@@ -1,0 +1,114 @@
+@font-face {
+  font-family: LeagueSpartan;
+  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, input, textarea, select {
+  font-family: LeagueSpartan, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #6BB5ED;
+}
+
+.voltar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-voltar {
+  border: none;
+  background: transparent;
+}
+
+#seta {
+  width: 6vh;
+  rotate: 180deg;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+#logo {
+  width: 7vh;
+}
+
+.vermelho {
+  color: red;
+}
+
+
+.selecionar-posts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.lista{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-post{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+  padding: 20px;
+  width: 25vh;
+  height: 35vh;
+}
+.img-post{
+  width: 15vh;
+}
+.btn-alterar{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 15px;
+  border: none;
+  background-color: #f4ff5b;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+@media screen and (max-width:500px) {
+  .lista{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:800px) {
+    .lista{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+@media screen and (min-width:800px)  {
+    .lista{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+}

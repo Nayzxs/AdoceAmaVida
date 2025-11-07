@@ -1,0 +1,177 @@
+@font-face {
+  font-family: LeagueSpartan;
+  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+
+  font-family: Allura;
+  src: url(/assets/fonts/Allura/Allura-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: LeagueSpartan, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #6BB5ED;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+.voltar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-voltar {
+  border: none;
+  background: transparent;
+}
+
+#seta {
+  width: 6vh;
+  rotate: 180deg;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+#logo {
+  width: 7vh;
+}
+
+.vermelho {
+  color: red;
+}
+
+
+body {
+  background-color:  hsla(111, 33%, 51%, 0.163);
+}
+a {
+  text-decoration: none;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 20px;
+
+  h1 {
+    color: #028af1;
+    font-size: 39px;
+  }
+
+  p {
+    color: rgb(159, 150, 12);
+    font-family: Allura;
+    font-size: 25px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+
+}
+
+.card-dicas {
+  width: 45vh;
+  height: 20vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  border-radius: 15px;
+  margin: 0 20px 0 20px;
+}
+.card-dicas:hover{
+transform: rotateY(10deg);
+  
+}
+
+#azul {
+  background-color: #66a6da;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+#transparent {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  background-color: #ffffffae;
+  border: #ffffff 3px solid;
+  color: #000000;
+  text-align: start;
+}
+
+.img-dicas {
+  max-width: 15vh;
+  max-height: 15vh;
+  border: 2px solid #6d6d6d;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: #ffffff;
+}
+
+.texto-dicas {
+  text-align: start;
+  padding: 5px;
+  height: 20vh;
+  overflow: hidden;
+
+  h1 {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 30px) and (max-width: 700px) {
+  .card-dicas {
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .card-dicas{
+    width: 90%;
+  }
+
+}
