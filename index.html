@@ -167,6 +167,8 @@
                 </div>
                 <a class="botao" href="/html/post/dicas.html" >Ver mais</a>
             </div>
+            <div id="map" style="height: 500px; width: 100%;"></div>
+        </div>
         </section>
 
         <section class="mapa">
@@ -216,3 +218,28 @@
     </footer>
     <script src="/js/script.js"></script>
 </body>
+
+<!-- Link para o CSS do Mapbox -->
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+
+<!-- Script do Mapbox -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+<script>
+    // Substitua com sua chave do Mapbox
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+
+    // Inicializa o mapa do Mapbox
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-46.633308, -23.55052], // São Paulo, Brasil
+        zoom: 12
+    });
+
+    // Adiciona um marcador no mapa
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-46.633308, -23.55052])
+        .setPopup(new mapboxgl.Popup().setHTML("<h3>Clínica Veterinária</h3><p>Endereço exemplo</p>"))
+        .addTo(map);
+</script>
