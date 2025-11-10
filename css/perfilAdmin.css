@@ -131,9 +131,9 @@ footer{
     border-radius: 20px;
     border: none;
     padding: 10px;
-    width: 20vh;
+    width: 30vh;
     height: 7vh;
-    font-weight: 600;
+    font-weight: 500;
     color: rgb(0, 0, 0);
     cursor: pointer;
     display: flex;
@@ -141,10 +141,7 @@ footer{
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    a{
-      font-size: 90vh;
 
-    }
     
   }
   .botao:hover{
@@ -160,6 +157,9 @@ footer{
     justify-content: center;
     gap: 40px;
     margin-top: 60px;
+    a{
+      font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -170,6 +170,7 @@ footer{
     border-radius:30px;
     padding:9px;
     font-size:15px;
+    
 
     }
     .sair{

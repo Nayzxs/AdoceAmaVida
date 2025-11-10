@@ -13,10 +13,7 @@ if (posts[index]) {
     <div class="perfil">
       <img id="preview" src="${post.imagem || '/assets/img/addimg.png'}" alt="Preview"
           style="width:150px; height:150px; border-radius:50vh;">
-      <label class="custom-file">
-        Alterar imagem
-        <input type="file" id="arquivo" accept="image/*">
-      </label>
+        <input type="file" id="alterarFoto">
     </div>
 
     <div class="container">
@@ -89,7 +86,7 @@ if (posts[index]) {
   btnConfirmarModal.addEventListener("click", () => {
     posts.splice(index, 1);
     localStorage.setItem("posts", JSON.stringify(posts));
-    window.location.href = "/html/Admin/indexAdmin.html";
+    window.location.href = "/html/Admin/index.html";
   });
 
 } else {

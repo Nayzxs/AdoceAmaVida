@@ -107,7 +107,7 @@ header{
   }
   
   a{
-    color: #fff132;
+    color: #fff3a1;
     padding: 10px;
     font-size: 25px;
     font-weight: 600;
@@ -255,14 +255,10 @@ header{
   justify-content: space-around;
 }
 
-
-.dicas-1,.dicas-2,.dicas-3,.dicas-4{
-  padding: 10px;
-}
 .container-dicas{
   display: flex;
   flex-direction: row;
-  background-color: hsla(111, 33%, 51%, 0.163);
+  background-color: hsla(38, 63%, 55%, 0.163);
   padding-top: 10px;
  
 }
@@ -271,9 +267,8 @@ transform: rotateY(10deg);
 }
 
 .box-dicas{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .titulo-dicas{
@@ -291,12 +286,21 @@ transform: rotateY(10deg);
   }
 }
 
+
 .card-dicas{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center; 
+  align-items: start;
   border-radius: 15px; 
+  margin: 20px;
+  width: 90%;
+  height: 25vh;
+
+  a{
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+  }
 }
 
 #azul{
@@ -307,12 +311,12 @@ transform: rotateY(10deg);
 #transparent{
   background-color: #ffffffae ;
     border: #ffffff 3px solid;
-    padding: 5px;
 }
 .img-dicas{
   width: 15vh;
+  height: 15vh;
   border: 2px solid #6d6d6d;
-  margin: 10px;
+  margin: 15px;
   border-radius: 20px;
   padding: 10px;
   background-color: #FFF;
@@ -320,9 +324,12 @@ transform: rotateY(10deg);
 
 .texto-dicas{
   padding: 5px;
-  max-width: 905;
+  width: 70%;
   height: 20vh;
+  word-break: break-all;
   overflow: hidden;
+  margin: 20px;
+  color: #000;
   h1{
     font-weight: 600;
     font-size: 20px;
@@ -339,13 +346,15 @@ transform: rotateY(10deg);
   justify-content: center;
   margin-top: 40px;
 }
+
+
 .container-mapa{
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(112, 174, 219);
   width: 70%;
   height: 50vh;
 }
@@ -428,6 +437,7 @@ a{
   width: 6vh;
 }
 
+
 @media screen and (max-width: 500px){
   .menu-desktop{
     display: none;
@@ -436,15 +446,14 @@ a{
     display: grid;
     grid-template-columns: repeat(2,1fr);
   }
+  .box-dicas{
+    grid-template-columns: 100%;
+  }
 
   .botao{
     position: sticky;
   top: 10vh;
   left: 35%;
-  }
-  .dicas-1,.dicas-2{
-    display: flex;
-    flex-direction: column;
   }
   .card-dicas{
     display: flex;
@@ -452,16 +461,13 @@ a{
     width: 95%;
     margin: 10px;
   }
-  .dicas-3,.dicas-4{
-    display: none;
-  }
 
   .container-mapa{
     height: 60vh;
   }
 }
 
-@media screen and (min-width: 501px) and (max-width: 750px) {
+@media screen and (min-width: 501px) and (max-width: 800px) {
   .menu-desktop{
     display: none;
   }
@@ -484,13 +490,13 @@ a{
     width: 95%;
     margin: 10px;
   }
-    .dicas-3,.dicas-4, .foto3, .foto4{
-    display: none;
-  }
   
+    .box-dicas{
+    grid-template-columns: 100%;
+  }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
   .menu-container{
     display: none;
   }

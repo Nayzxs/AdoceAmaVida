@@ -71,9 +71,10 @@ section {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
+  font-size: 20px;
   color: #71acf0;
-  width: 70%;
+  margin-top: 20px;
+  width: 100%;
   gap: 5px;
 
 }
