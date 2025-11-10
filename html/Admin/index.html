@@ -112,11 +112,7 @@
                         <div class="card-dicas" id="azul">
                             <img class="img-dicas" src="/assets/img/download.jpg" alt="">
                             <div class="texto-dicas">
-                                <h1>Alimentação</h1>
-                                <p>Descubra como oferecer a nutrição ideal para cada fase da vida do pet. Veja dicas
-                                    sobre
-                                    rações, alimentação natural, petiscos saudáveis e cuidados para evitar sobrepeso e
-                                    deficiências nutricionais.</p>
+                                <h1></p>
                             </div>
                         </div>
                     </div>
@@ -125,11 +121,8 @@
                         <div class="card-dicas" id="transparent">
                             <img class="img-dicas" src="/assets/img/download.jpg" alt="">
                             <div class="texto-dicas">
-                                <h1>Alimentação</h1>
-                                <p>Descubra como oferecer a nutrição ideal para cada fase da vida do pet. Veja dicas
-                                    sobre
-                                    rações, alimentação natural, petiscos saudáveis e cuidados para evitar sobrepeso e
-                                    deficiências nutricionais.</p>
+                                <h1></h1>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -140,11 +133,8 @@
                         <div class="card-dicas " id="transparent">
                             <img class="img-dicas" src="/assets/img/download.jpg" alt="">
                             <div class="texto-dicas">
-                               <h1>Alimentação</h1>
-                                <p>Descubra como oferecer a nutrição ideal para cada fase da vida do pet. Veja dicas
-                                    sobre
-                                    rações, alimentação natural, petiscos saudáveis e cuidados para evitar sobrepeso e
-                                    deficiências nutricionais.</p>
+                               <h1></h1>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -153,11 +143,8 @@
                         <div class="card-dicas" id="azul">
                             <img class="img-dicas" src="/assets/img/download.jpg" alt="">
                             <div class="texto-dicas">
-                                <h1>Alimentação</h1>
-                                <p>Descubra como oferecer a nutrição ideal para cada fase da vida do pet. Veja dicas
-                                    sobre
-                                    rações, alimentação natural, petiscos saudáveis e cuidados para evitar sobrepeso e
-                                    deficiências nutricionais.</p>
+                                <h1></h1>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -174,7 +161,9 @@
                     <p>Encontre clínicas veterinárias e pet shops próximos a você no mapa!</p>
                 </div>
 
-                <div class="white"></div>
+                <div class="white">
+                     <div id="map" style="height: 100%; width: 100%;"></div>
+                </div>
             </div>
         </section>
     </main>
@@ -214,3 +203,29 @@
 
 
 </html>
+
+<!-- Link para o CSS do Mapbox -->
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
+
+<!-- Script do Mapbox -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+<script>
+    // Substitua com sua chave do Mapbox
+    mapboxgl.accessToken = 'YOUR_MAPBOX_ACCESS_TOKEN';
+
+    // Inicializa o mapa do Mapbox
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-46.633308, -23.55052], // São Paulo, Brasil
+        zoom: 12
+    });
+
+    // Adiciona um marcador no mapa
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-46.633308, -23.55052])
+        .setPopup(new mapboxgl.Popup().setHTML("<h3>Clínica Veterinária</h3><p>Endereço exemplo</p>"))
+        .addTo(map);
+
+</script>
