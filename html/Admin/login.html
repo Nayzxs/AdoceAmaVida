@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body class="login-body">
+
+    <img class="login-background" src="/assets/img/—Pngtree—four adorable pets including two_21601190.png" alt="Inicio" >
+
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </span>
+
+        <!-- LOGIN -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" name="senha" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="manterLogado">Manter logado</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+        </div>
