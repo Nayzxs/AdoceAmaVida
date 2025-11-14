@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #6BB5ED;
+
+    h1 {
+        font-size: 25px;
+
+    }
+}
+
+.voltar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-voltar {
+    border: none;
+    background: transparent;
+}
+
+#seta {
+    width: 6vh;
+    rotate: 180deg;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+
+}
+
+#logo {
+    width: 7vh;
+}
+
+.vermelho {
+    color: red;
+}
+
+section {
+    overflow-wrap: break-word;
+
+}
+
+.perfil-animal {
+    margin: 20px;
+
+}
+
+.card-foto-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto {
+    object-fit: cover;
+    border-radius: 20px;
+    border: rgba(174, 177, 181, 0.483) 4px solid;
+
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+
+    h2 {
+        font-size: 35px;
+        font-weight: 600;
+        color: #6BB5ED;
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+
+    h4 {
+        color: #edeb6b;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.descricao {
+    background-color: rgb(228, 228, 228);
+    border: 3px solid rgb(205, 205, 205);
+    margin: 10px 0px;
+    width: 90%;
+    height: 25vh;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+.cards-container {
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.card {
+    background-color: #6BB5ED;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+.Destaques{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contatoBtn {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: 600;
+    background-color: rgb(255, 248, 118);
+    border: none;
+    border-radius: 15px;
+}
+
+
+
+
+
+@media screen and (min-width: 1020px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil-animal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 20px 20px;
+        max-width: 1200px;
+    }
+
+    #perfilContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+    }
+
+    .card-foto-perfil {
+        flex-shrink: 1;
+        align-items: flex-start;
+        margin: 10px;
+    }
+
+    .foto {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .descricao {
+        width: 40vh;
+        padding: 15px;
+        height: 90%;
+
+        overflow-wrap: break-word;
+    }
+
+    .botao {
+        display: block;
+        text-align: start;
+    }
+
+    section {
+        display: block;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 2px 10px;
+    }
+
+}

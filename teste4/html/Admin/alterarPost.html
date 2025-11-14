@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Post</title>
+    <link rel="stylesheet" href="/css/alterarPost.css">
+    <link rel="icon" href="/assets/img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="voltar">
+            <button onclick="window.history.back()" class="btn-voltar">
+                <img id="seta" src="/assets/icons/next.png" alt="">
+            </button>
+        </div>
+        <div class="logo">
+            <h1>AdoceUma<span class="vermelho">Vida</span></h1>
+            <img id="logo" src="/assets/img/logo.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section class="alterar-post">
+            <h1>Alterar Post</h1>
+
+            <div id="formContainer"></div>
+
+            <!-- Modal de confirmação de exclusão -->
+            <section class="modal" id="modal">
+                <div class="container">
+                    <div class="container1">
+                        <div class="card1">
+                            <img class="post-img" src="/assets/img/kitty (3).png" alt="Post">
+                        </div>
+                        <div class="card2">
+                            <h1>Tem Certeza?</h1>
+                            <p>Deseja excluir <span id="nomePost"></span>?</p>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <button id="cancelar">Cancelar</button>
+                        <button id="confirmar">Confirmar</button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="/js/alterarPost.js"></script>
+</body>
+</html>

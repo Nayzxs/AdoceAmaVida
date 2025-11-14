@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Animal</title>
+    <link rel="stylesheet" href="/css/adicionarAnimal.css">
+    <link rel="stylesheet.." href="/assets/img/logoAdmin.png">
+</head>
+
+<body>
+    <header>
+        <div class="voltar">
+            <button onclick="window.history.back()" class="btn-voltar">
+                <img id="seta" src="/assets/icons/next.png" alt="">
+            </button>
+        </div>
+        <div class="logo">
+            <h1>AdoceUma<span class="vermelho">Vida</span></h1>
+            <img id="logo" src="/assets/img/logo.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section class="cadastro-animal">
+            <h1>Adicionar Animal</h1>
+            <form id="animalForm">
+                <div class="perfil">
+                    <img id="preview" src="/assets/img/addimg.png" alt="Preview"
+                        style="width:150px; height:150px; border-radius:50vh;">
+                    <label class="custom-file">
+                        Adicionar imagem
+                        <input type="file" id="arquivo" accept="image/*" required>
+                    </label>
+                </div>
+
+               
+                
+                <div class="informacoes-sexo">
+                        <input type="text" id="nome" placeholder="Nome do animal" required>
+                        <label>Sexo:</label>
+                        <div class="sexo">
+
+                            <input type="radio" id="macho" name="sexo" value="Macho" required>
+                            <label for="macho">Macho</label><br>
+                            <input type="radio" id="femea" name="sexo" value="Fêmea" required>
+                            <label for="femea">Fêmea</label>
+                        </div>
+                    </div>
+
+                    <div class="sobre"><br>
+                        <label for="idade">Adicionar idade</label>
+                        <input type="number" id="idade" placeholder="Idade do animal" required>
+                        
+                        <label for="raca">Adicionar raça do animal </label>
+                        <input type="text" id="raca" placeholder="Raça do animal">
+                        
+                        <label for="destaques">Adicionar destaques</label>
+                        <input type="text" id="destaques" placeholder="Ex: Vacinado, Carinhoso, Ciumento">
+                    </div>
+
+                    <div class="bio">
+                        <textarea id="descricao" placeholder="Descrição do animal" rows="10"></textarea>
+                        <button type="submit">Salvar</button>
+                    </div>
+        
+
+            </form>
+        </section>
+    </main>
+
+    <script src="/js/adicionarAnimal.js"></script>
+</body>
+
+</html>

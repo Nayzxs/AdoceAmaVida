@@ -1,0 +1,129 @@
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: LeagueSpartan;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #6BB5ED;
+    h1{
+        font-size: 25px;
+
+    }
+}
+.voltar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+.btn-voltar{
+    border: none;
+    background: transparent;
+}
+#seta{
+    width: 6vh;
+    rotate: 180deg;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 10px;
+
+}
+#logo{
+    width: 7vh;
+}
+.vermelho{
+    color: red;
+}
+
+
+.animais-adocao{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  color: #72c2ff;
+  font-size: 2vh;
+  margin-top: 5px;
+  h1{
+    margin-top: 10px;
+    font-size: 30px;
+  }
+
+}
+
+.container-animais{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  gap: 10px;
+  font-size: 16px;
+}
+.cards-animais{
+  height: 25vh;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  border-radius: 35px;
+  padding: 10px;
+  border: 3px solid #919090;
+
+}
+.nome,.raca{
+   color: #0f5e9a;
+}
+.cards-animais:hover{
+  border: 3px solid #a09974;
+  transform: rotateZ(2deg);
+  background-color: #dbd8a03e;
+  
+}
+.card-foto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foto{
+  width: 15vh;
+  height: 15vh;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media screen and (min-width:501px) and (max-width:750px) {
+.container-animais{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+}
+
+@media screen and (min-width:750px) {
+.container-animais{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+}
