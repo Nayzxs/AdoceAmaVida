@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar post</title>
+    <link rel="stylesheet" href="/css/adicionarPost.css">
+</head>
+<body>
+    <header>
+        <div class="voltar">
+            <button onclick="window.history.back()" class="btn-voltar">
+                <img id="seta" src="/assets/icons/next.png" alt="">
+            </button>
+        </div>
+        <div class="logo">
+            <h1>AdoceUma<span class="vermelho">Vida</span></h1>
+            <img id="logo" src="/assets/img/logo.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Adicionar Post</h1>
+
+             <form id="postForm">
+                <div class="perfil">
+                    <img id="preview" src="/assets/img/addimg.png" alt="Preview"
+                        style="width:150px; height:150px; border-radius:50vh;">
+                    <label class="custom-file">
+                        Adicionar imagem
+                        <input type="file" id="arquivo" accept="image/*" required>
+                    </label>
+                </div>
+
+               
+            
+                <div class="container">
+
+                    <div class="informacoes">
+                        <label for="tituloConteudo">Titulo do conteúdo</label>
+                        <input type="text" class="input" id="tituloConteudo" required><br>
+                        
+                        <label for="linkConteudo">Link do conteúdo</label>
+                        <input type="text" class="input" id="linkConteudo" required>
+                    </div>
+                    
+                    <div class="bio">
+                        <label for="descricao">Adicione uma descrição do conteúdo</label>
+                        <textarea id="descricao" placeholder="Descrição do conteúdo" rows="10"></textarea>
+                        <div class="btn">
+                            <button type="submit">Salvar</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </section>
+    </main>
+
+    <script src="/js/adicionarPost.js"></script>
+</body>
+</html>

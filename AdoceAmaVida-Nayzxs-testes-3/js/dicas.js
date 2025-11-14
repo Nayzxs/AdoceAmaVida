@@ -1,0 +1,34 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
+  const posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+  // Se não houver posts salvos
+  if (posts.length === 0) {
+    container.innerHTML = `<p style="text-align:center;">Nenhum post adicionado ainda.</p>`;
+    return;
+  }
+
+  // Limpa o container antes de inserir
+  container.innerHTML = '';
+
+  // Exibe todos os posts com o padrão xadrez (azul/transparente)
+  posts.forEach((post, index) => {
+    const card = document.createElement('a');
+    card.classList.add('card-dicas');
+    card.href = post.link || "#";
+    card.target = "_blank";
+
+    // alterna entre azul e transparente (efeito xadrez)
+    card.id = index % 3 === 0 ? "azul" : "transparent";
+
+    card.innerHTML = `
+      <img class="img-dicas" src="${post.imagem}" alt="${post.titulo}">
+      <div class="texto-dicas">
+        <h1>${post.titulo}</h1>
+        <p>${post.descricao}</p>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+});
