@@ -44,7 +44,7 @@ document.getElementById('salvarBtn').addEventListener('click', () => {
 
   localStorage.setItem('animais', JSON.stringify(animais));
   alert("Perfil atualizado com sucesso!");
-  window.location.href = "/html/Admin/selecionarAnimal.html";
+  window.location.href = "../html/configuracaoAnimal.html";
 });
 
   document.getElementById('cancelarBtn').addEventListener('click', () => {
@@ -75,7 +75,7 @@ btnCancelarModal.addEventListener("click", () => {
 btnConfirmarModal.addEventListener("click", () => {
   animais.splice(index, 1);
   localStorage.setItem("animais", JSON.stringify(animais));
-  window.location.href = "/html/Admin/indexAdmin.html";
+  window.location.href = "../Admin/indexAdmin.html";
 });
 
 

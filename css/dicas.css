@@ -1,9 +1,9 @@
 @font-face {
   font-family: LeagueSpartan;
-  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+  src: url(../assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
 
   font-family: Allura;
-  src: url(/assets/fonts/Allura/Allura-Regular.ttf);
+  src: url(../assets/fonts/Allura/Allura-Regular.ttf);
 }
 
 * {
@@ -26,6 +26,11 @@ header {
   align-items: center;
   padding: 10px;
   background-color: #6BB5ED;
+  
+  a{
+    color: #000000;
+  }
+
 }
 
 header h1 {
@@ -131,8 +136,8 @@ transform: rotateY(10deg);
 }
 
 .img-dicas {
-  max-width: 15vh;
-  max-height: 15vh;
+  width: 20vh;
+  height: 15vh;
   border: 2px solid #6d6d6d;
   margin: 10px;
   border-radius: 20px;

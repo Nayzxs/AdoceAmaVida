@@ -1,6 +1,6 @@
 @font-face {
   font-family: LeagueSpartan;
-  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+  src: url(../assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
 }
 
 * {
@@ -75,20 +75,15 @@ header {
   align-items: center;
   background-color: gray;
   padding: 20px;
-  width: 25vh;
-  height: 35vh;
+  width: 20vh;
+  height: 25vh;
 }
 .img-post{
   width: 15vh;
+  height: 15vh;
 }
 .btn-alterar{
-  padding: 10px;
-  margin: 5px;
-  border-radius: 15px;
-  border: none;
-  background-color: #f4ff5b;
-  font-weight: 500;
-  color: #000;
+
   cursor: pointer;
 }
 

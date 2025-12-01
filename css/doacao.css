@@ -1,6 +1,6 @@
 @font-face {
   font-family: LeagueSpartan;
-  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+  src: url(../assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
 }
 
 * {
@@ -71,9 +71,10 @@ section {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
+  font-size: 20px;
   color: #71acf0;
-  width: 70%;
+  margin-top: 20px;
+  width: 100%;
   gap: 5px;
 
 }
@@ -118,7 +119,7 @@ strong {
   padding: 30px;
   font-size: 22px;
   font-weight: 900;
-  color: #120909;
+  color: #000000;
   background-color: rgb(163, 213, 232);
   border-radius: 10px;
   text-align: center;
@@ -130,7 +131,7 @@ a:hover {
   border: none;
   transition: 0.5s ease;
   background-color: #f6f3aefc;
-  color: rgb(0, 0, 0);
+  color: rgb(54, 143, 182);
   box-shadow: #d1c62f 7px 6px 10px 0px;
 }
 

@@ -1,6 +1,6 @@
 @font-face {
     font-family: LeagueSpartan;
-    src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+    src: url(../assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
 }
 
 *{
@@ -10,7 +10,7 @@
     font-weight: 550;
 }
 body{
-    background-color: rgba(255, 0, 0, 0.286);
+    background-color: rgba(150, 142, 82, 0.286);
 }
 header{
     margin: 20px;
@@ -48,10 +48,15 @@ h1{
     text-align: center;
     max-width: 400px;
     font-size: 19px;
-    box-shadow: 1px 1px 30px rgb(230, 223, 151);
     padding: 60px;
     border-radius: 50px;
     background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 30px rgba(122, 160, 176, 0.493);
+}
+
+.container:hover{
+    box-shadow: 1px 1px 30px rgba(254, 246, 0, 0.493);
+
 }
 
 .texto{
@@ -59,6 +64,11 @@ h1{
 }
 .coracao{
     width: 40px;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.coracao:hover{
+    transform: rotate(10deg);
 }
 
 #c-direita{

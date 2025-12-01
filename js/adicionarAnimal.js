@@ -51,7 +51,7 @@ animalForm.addEventListener('submit', (e) => {
 
       alert("Animal adicionado com sucesso!");
       animalForm.reset();
-      preview.src = "/assets/img/addimg.png"; // volta imagem padrão
+      preview.src = "../assets/img/addimg.png"; // volta imagem padrão
     };
 
     reader.readAsDataURL(arquivo.files[0]);

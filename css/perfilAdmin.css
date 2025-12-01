@@ -1,6 +1,6 @@
 @font-face {
   font-family: LeagueSpartan;
-  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+  src: url(../assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
 }
 
 * {
@@ -76,26 +76,6 @@ main{
     margin-top: 30px;
     color: #159af9;
 }
-.perfil{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.bolafoto{
-    background-color: gray;
-    width: 120px;
-    height: 120px;
-    border-radius: 100vh;
-}
-.seja-bem-vindo{
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  gap: 10px;
-}
 
 .corpo-do-site{
     display: flex;
@@ -127,13 +107,13 @@ footer{
 }
 
 .botao{
-    background-color:#f6ff91;
+    background-color:#faef57;
     border-radius: 20px;
     border: none;
     padding: 10px;
-    width: 20vh;
-    height: 7vh;
-    font-weight: 600;
+    min-width: 6rem;
+    min-height: 8vh;
+    font-weight: 500;
     color: rgb(0, 0, 0);
     cursor: pointer;
     display: flex;
@@ -141,10 +121,7 @@ footer{
     justify-content: center;
     text-align: center;
     text-decoration: none;
-    a{
-      font-size: 90vh;
 
-    }
     
   }
   .botao:hover{
@@ -160,6 +137,9 @@ footer{
     justify-content: center;
     gap: 40px;
     margin-top: 60px;
+    a{
+      font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -170,29 +150,12 @@ footer{
     border-radius:30px;
     padding:9px;
     font-size:15px;
+    
 
     }
     .sair{
     padding:14px;
     font-size:16px;
-  }
-  .bolafoto{
-    width: 10vh;
-    height: 10vh;
-    margin-left: 10px;
-    
-  }
-  .perfil{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    gap: 20px;
-  }
-  .editar{
-    width:20px;
-    height:20px;
   }
 }
 
@@ -207,41 +170,20 @@ footer{
     padding:15px;
     font-size:16px;
   }
-  .bolafoto{
-    width: 14vh;
-    height:14vh;
-
-    
-  }
-  .perfil{
-    font-size: 18px;
-    gap: 35px;
-  }
-  .editar{
-    width:22px;
-    height:22px;
-  }
 }
 
-@media screen and (min-width: 750px) and (max-width: 2560px) {
+@media screen and (min-width: 750px) {
   .botao{
     border-radius:35px;
     padding:12px;
     font-size:16px;
+    width: 10rem;
+    height: 7vh;
     }
     .sair{
     border-radius:30px;
     padding:17px;
     font-size:18px;
-  }
-  .bolafoto{
-    width: 18vh;
-    height: 18vh;
-    
-  }
-  .perfil{
-    margin-top: 1px;
-    font-size: 22px;
   }
   .titulo-perfil{
     display: flex;
@@ -249,9 +191,4 @@ footer{
     margin-bottom: 50px;
     font-size: 20px;
   }
-  .editar{
-    width:25px;
-    height:25px;
-  }
-
 }

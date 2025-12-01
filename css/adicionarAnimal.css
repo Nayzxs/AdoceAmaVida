@@ -1,6 +1,6 @@
 @font-face {
   font-family: LeagueSpartan;
-  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+  src: url(../assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
 }
 
 * {
@@ -23,6 +23,7 @@ header {
   align-items: center;
   padding: 10px;
   background-color: #6BB5ED;
+
 }
 
 header h1 {

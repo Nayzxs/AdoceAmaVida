@@ -43,10 +43,53 @@ animaisMostrados.forEach((animal, index) => {
   // Adiciona evento de clique para ir ao perfil
   card.addEventListener("click", () => {
     localStorage.setItem("animalSelecionado", index);
-    window.location.href = "/html/pets/perfilAnimal.html";
+    window.location.href = "./html/pets/perfilAnimal.html";
   });
 
   containerAnimais.appendChild(card);
 });
+
+
+
+
+
+
+//posters 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const containerDicas = document.querySelector('.box-dicas');
+    const posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+    if (!containerDicas || posts.length === 0) return;
+
+    // Limpa o conteúdo atual
+    containerDicas.innerHTML = '';
+
+    // Pega apenas os 4 últimos posts
+    const ultimosPosts = posts.slice(-4).reverse();
+
+    ultimosPosts.forEach((post, index) => {
+      // Cria o card
+      const card = document.createElement('div');
+      card.classList.add('card-dicas');
+
+      // alterna cor de fundo como no layout original
+      card.id = index % 3 === 0 ? 'azul' : 'transparent';
+
+      card.innerHTML = `
+      <a href="${post.link}" target="_blank">
+        <img class="img-dicas" " src="${post.imagem}" alt="${post.titulo}">
+          <div class="texto-dicas">
+          <h1>${post.titulo}</h1>
+          <p>${post.descricao}</p>
+          </div>
+          </a>
+      `;
+
+      // adiciona ao container
+      containerDicas.appendChild(card);
+    });
+  });
 
 

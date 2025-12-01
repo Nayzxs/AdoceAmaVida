@@ -8,20 +8,22 @@ if (posts.length === 0) {
     const card = document.createElement('div');
     card.classList.add('card-post');
     card.innerHTML = `
-      <img src="${post.imagem}" alt="${post.titulo}" class="img-post">
-      <div class="info">
-        <h3>${post.titulo}</h3>
-        <button class="btn-alterar" data-index="${index}">Alterar</button>
-      </div>
+      <a class="btn-alterar" data-index="${index}">
+        <img src="${post.imagem}" alt="${post.titulo}" class="img-post">
+        <div class="info">
+          <h3>${post.titulo}</h3>
+        </div>
+      </a>
     `;
     listaPosts.appendChild(card);
   });
 
+  // 🔧 Corrigido — garante que o click sempre pega o <a> com o data-index
   document.querySelectorAll('.btn-alterar').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      const index = e.target.getAttribute('data-index');
+      const index = e.currentTarget.getAttribute('data-index');
       localStorage.setItem('postSelecionado', index);
-      window.location.href = "/html/Admin/alterarPost.html";
+      window.location.href = "../Admin/alterarPost.html";
     });
   });
 }

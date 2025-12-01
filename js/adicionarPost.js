@@ -46,7 +46,7 @@ postForm.addEventListener('submit', (e) => {
 
     alert("Post adicionado com sucesso!");
     postForm.reset();
-    preview.src = "/assets/img/addimg.png";
+    preview.src = "../assets/img/addimg.png";
   };
 
   reader.readAsDataURL(arquivo.files[0]);
