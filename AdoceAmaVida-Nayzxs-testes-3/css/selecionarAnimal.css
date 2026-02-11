@@ -1,0 +1,104 @@
+@font-face {
+  font-family: LeagueSpartan;
+  src: url(/assets/fonts/leagueSpartan/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, input, textarea, select {
+  font-family: LeagueSpartan, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #6BB5ED;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+.voltar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-voltar {
+  border: none;
+  background: transparent;
+}
+
+#seta {
+  width: 6vh;
+  rotate: 180deg;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+#logo {
+  width: 7vh;
+}
+
+.vermelho {
+  color: red;
+}
+
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+  }
+}
+#listaAnimais{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.animal-item{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  padding: 15px 10px;
+  margin: 10px;
+  background-color: #9b9b9b;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  border-radius: 5px;
+
+  img{
+    border-radius: 2vh;
+  }
+}
+
+@media screen and (max-width:500px) {
+#listaAnimais{
+  grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media screen and (min-width:500px) and (max-width:700px) {
+#listaAnimais{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+}
